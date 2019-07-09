@@ -1,6 +1,12 @@
-missing_packages <- function() {
+packagesToInstall <- c("DT","shiny","shinydashboard","RODBC","shinyjs","dingleweed")
+
+# append to vector to packages you wish to install then run the function passing the vector as an argument
+#
+#
+#
+#
+missing_packages <- function(packagesToInstall) {
   installedOnMachine <- installed.packages()
-  packagesToInstall <- c("DT","shiny","shinydashboard","RODBC","shinyjs","dingleweed")
   required <- packagesToInstall[!(packagesToInstall %in% installedOnMachine)]
   if (length(required) > 0) {
     message(paste("You are missing the following packages: ",required ))
