@@ -3,12 +3,12 @@
 #library(shinydashboard)
 #library(shinyjs)
 #library(RODBC)
-source("login.R")
-source("logout.R")
+source("R/login.R")
+source("R/logout.R")
 
 ui <- shinydashboard::dashboardPage(
   
-  shinydashboard::dashboardHeader(title = "SAGA",
+  shinydashboard::dashboardHeader(title = "NEFSC Survey Data Portal",
                   tags$li(class = "dropdown", style = "padding: 8px;",
                           logoutUI("logout"))
   ),
