@@ -26,7 +26,7 @@ ui <- shinydashboard::dashboardPage(
     ),
     
     loginUI("login",error_message = paste0("Login failed. Three failures and you'll need to contact IT to reset")),
-    shiny::uiOutput("testUI"),
+    shiny::uiOutput("SAGAUI"),
     shiny::HTML('<div data-iframe-height></div>')
   )
 )
@@ -66,7 +66,7 @@ server <- function(input, output, session) {
   
   # linked to shiny::uiOutput("testUI") call
   # this is where SAGA stuff goes. Wont need DT
-  output$testUI <- shiny::renderUI({
+  output$SAGAUI <- shiny::renderUI({
     shiny::req(credentials()$user_auth)
     
     shiny::fluidRow(
