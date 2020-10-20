@@ -1,4 +1,4 @@
-packagesToInstall <- c("DT","shiny","shinydashboard","RODBC","shinyjs")
+packagesToInstall <- c("DT","shiny","shinydashboard","DBI","odbc","shinyjs")
 
 # append to vector to packages you wish to install then run the function passing the vector as an argument
 #

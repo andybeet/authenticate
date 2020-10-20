@@ -74,7 +74,7 @@ loginServer <- function(input, output, session, log_out = NULL) {
     shiny::updateTextInput(session, "password", value = "")
     
     # closes all odbc objects
-    RODBC::odbcClose(credentials$channel)
+    DBI::dbDisconnect(credentials$channel)
   })
 
   # toggled login and app
@@ -85,16 +85,32 @@ loginServer <- function(input, output, session, log_out = NULL) {
 
   shiny::observeEvent(input$button, {
       # check to see if connection can be made. If so authentication made. channel passed back
-      channel <- RODBC::odbcConnect(dsn="sole",uid = input$user_name,pwd=input$password)
-      if ((channel == -1) | (is.null(channel))) {
-        password_match <- FALSE
-        shinyjs::toggle(id = "error", anim = TRUE, time = 1, animType = "fade")
-        shinyjs::delay(5000, shinyjs::toggle(id = "error", anim = TRUE, time = 1, animType = "fade"))
-      } else {
+      channel <- tryCatch(
+        {
+          channel <- DBI::dbConnect(odbc::odbc(), dsn="sole",uid=input$user_name,pwd=input$password, timeout = 10)
+          
+        }, warning=function(w) {
+          if (grepl("login denied",w)) {message("login to server failed - Check username and password")}
+          if (grepl("locked",w)) {message("logon to server failed - Account may be locked")}
+          message(paste0("Can not Connect to Database: ",server))
+          return(NA)
+        }, error=function(e) {
+          message(paste0("Terminal error: ",e))
+          return(NA)
+        }, finally = {
+          
+        }
+      )
+      
+      if (isS4(channel)) {
         password_match <- TRUE
         credentials$user_auth <- TRUE
         credentials$info <- data.frame(user = input$user_name)
         credentials$channel <- channel
+      } else {
+        password_match <- FALSE
+        shinyjs::toggle(id = "error", anim = TRUE, time = 1, animType = "fade")
+        shinyjs::delay(5000, shinyjs::toggle(id = "error", anim = TRUE, time = 1, animType = "fade"))
       }
 
   })

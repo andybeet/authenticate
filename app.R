@@ -53,7 +53,7 @@ server <- function(input, output, session) {
   # dummy data used to fil panel
   user_data <- shiny::reactive({
     shiny::req(credentials()$user_auth)
-    RODBC::sqlQuery(credentials()$channel,"select * from cfdbs.area")
+    DBI::dbGetQuery(credentials()$channel,"select * from cfdbs.area")
   })
   
   # side bar panel
