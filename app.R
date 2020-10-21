@@ -2,7 +2,10 @@
 #library(shiny)
 #library(shinydashboard)
 #library(shinyjs)
-#library(RODBC)
+#library(DBI)
+#library(odbc)
+
+Sys.setenv(ORACLE_HOME="/ora1/app/oracle/product/11.2.0/dbhome_1")
 source("R/login.R")
 source("R/logout.R")
 
