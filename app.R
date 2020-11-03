@@ -11,7 +11,7 @@ source("R/logout.R")
 
 ui <- shinydashboard::dashboardPage(
   
-  shinydashboard::dashboardHeader(title = "NEFSC Survey Data Portal",
+  shinydashboard::dashboardHeader(title = "NEFSC Data Portal",
                   tags$li(class = "dropdown", style = "padding: 8px;",
                           logoutUI("logout"))
   ),
