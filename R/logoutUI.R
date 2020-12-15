@@ -11,7 +11,7 @@
 #'
 #'@return A Shiny UI action button
 #'
-#'@family loginout
+#'@family modules
 #'
 #'@section Reference:
 #'

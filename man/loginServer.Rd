@@ -20,14 +20,19 @@ A reactive 3 element list to your main application.
 \item{user_auth}{A boolean indicating whether there has been a successful login or not}
 \item{info}{will be the succesfully logged in username, otherwise = NULL}
 \item{channel}{\code{\link{DBI}} object after successful connection}
-
-#'@family loginout
-
-@examples
-\dontrun{
- user_credentials <- shiny::callModule(loginServer, "login", log_out = reactive(logout_init()))
- }
 }
 \description{
 Shiny authentication module for use with \code{\link{loginUI}}
 }
+\examples{
+ \dontrun{
+ user_credentials <- shiny::callModule(loginServer, "login", log_out = reactive(logout_init()))
+}
+}
+\seealso{
+Other modules: 
+\code{\link{loginUI}()},
+\code{\link{logoutServer}()},
+\code{\link{logoutUI}()}
+}
+\concept{modules}

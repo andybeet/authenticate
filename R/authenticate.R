@@ -9,8 +9,8 @@
 #'@section References:
 #'
 #'To learn more about using \code{authenticate}, please visit the [website](www.google.com)
-#' This code was modified from https://github.com/PaulC91/shinyauthr
-
+#'
+#'(This code was modified from https://github.com/PaulC91/shinyauthr)
 #'
 #' @docType package
 #' @name authenticate

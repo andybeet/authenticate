@@ -8,24 +8,22 @@
 #' @param session shiny session
 #' @param log_out reactive supply the returned reactive from logout here to trigger a user logout
 #'
-#'
 #' @return A reactive 3 element list to your main application.
 #' \item{user_auth}{A boolean indicating whether there has been a successful login or not}
 #' \item{info}{will be the succesfully logged in username, otherwise = NULL}
 #' \item{channel}{\code{\link{DBI}} object after successful connection}
 #'
-#'#'@family loginout
+#' @family modules
 #'
-#'  @examples
+#' @examples
 #'  \dontrun{
 #'  user_credentials <- shiny::callModule(loginServer, "login", log_out = reactive(logout_init()))
-#'  }
+#' }
 
 
 loginServer <- function(input, output, session, log_out = NULL) {
 
   credentials <- shiny::reactiveValues(user_auth = FALSE, info = NULL)
-  print(credentials)
 
   # observes the click of the logout button
   shiny::observeEvent(log_out(), {

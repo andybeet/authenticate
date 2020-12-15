@@ -12,7 +12,7 @@
 #'
 #'@returns returns Shiny UI
 #'
-#'@family loginout
+#'@family modules
 #'
 #'@section Reference:
 #' This code was modified from https://github.com/PaulC91/shinyauthr

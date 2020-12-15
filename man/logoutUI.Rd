@@ -29,8 +29,9 @@ This code was modified from https://github.com/PaulC91/shinyauthr
 }
 
 \seealso{
-Other loginout: 
+Other modules: 
+\code{\link{loginServer}()},
 \code{\link{loginUI}()},
 \code{\link{logoutServer}()}
 }
-\concept{loginout}
+\concept{modules}

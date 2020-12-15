@@ -11,7 +11,7 @@
 #' The reactive output of this module should be supplied as the log_out argument to the
 #'   loginServer module to trigger the logout process
 #'
-#'@family loginout
+#'@family modules
 #'
 #'@examples
 #'\dontrun{

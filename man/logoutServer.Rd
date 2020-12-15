@@ -30,8 +30,9 @@ loginServer module to trigger the logout process
 }
 }
 \seealso{
-Other loginout: 
+Other modules: 
+\code{\link{loginServer}()},
 \code{\link{loginUI}()},
 \code{\link{logoutUI}()}
 }
-\concept{loginout}
+\concept{modules}

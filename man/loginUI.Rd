@@ -45,8 +45,9 @@ loginUI("login")
 
 }
 \seealso{
-Other loginout: 
+Other modules: 
+\code{\link{loginServer}()},
 \code{\link{logoutServer}()},
 \code{\link{logoutUI}()}
 }
-\concept{loginout}
+\concept{modules}
