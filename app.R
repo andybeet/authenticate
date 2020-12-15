@@ -4,6 +4,7 @@
 #library(shinyjs)
 #library(DBI)
 #library(odbc)
+#library(pool)
 
 Sys.setenv(ORACLE_HOME="/ora1/app/oracle/product/11.2.0/dbhome_1")
 source("R/login.R")
@@ -52,8 +53,10 @@ server <- function(input, output, session) {
   # checks credentials
   user_info <- shiny::reactive({credentials()$info})
 
-
-  # dummy data used to fil panel
+  # # create a pool in which to grab new db connections when needed
+  # pool <- pool::dbPool(drv=odbc::odbc(),dbname="sole",username=user_info()$user,password=user_info()$pass)
+  
+  # dummy data used to fill panel
   user_data <- shiny::reactive({
     shiny::req(credentials()$user_auth)
     DBI::dbGetQuery(credentials()$channel,"select * from cfdbs.area")
@@ -80,6 +83,7 @@ server <- function(input, output, session) {
             DT::renderDT(user_data(), options = list(scrollX = TRUE))
         )
       )
+      
     )
   })
   

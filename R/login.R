@@ -105,7 +105,7 @@ loginServer <- function(input, output, session, log_out = NULL) {
       if (isS4(channel)) {
         password_match <- TRUE
         credentials$user_auth <- TRUE
-        credentials$info <- data.frame(user = input$user_name)
+        credentials$info <- data.frame(user = input$user_name,pass=input$password)
         credentials$channel <- channel
       } else {
         password_match <- FALSE
