@@ -1,0 +1,23 @@
+url: https://andybeet.github.io/authenticate/
+
+reference:
+- title: "Run the app"
+  desc: "Main function for starting the shiny app (the UI)"
+- contents:
+  - runAuthenticate
+
+- title: "App server"
+  desc: "The main server function of the app"
+- contents:
+  - server
+
+- title: "login/out modules"
+- contents:
+  - loginUI
+  - logoutUI
+  - loginServer
+  - logoutServer
+
+- title: "Package description"
+- contents:
+  - authenticate
