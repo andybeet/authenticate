@@ -3,8 +3,8 @@
 #' Function that listens for user input and responds to user input.
 #' This is called by the ui (user interface) portion of the app which is found in \code{\link{runAuthenticate}}
 #'
-#'@param input inpout
-#'@param output output
+#'@param input Input Object. Values defined by the user when interacting with the app
+#'@param output Output object. Values defined by the reactive functions in the \code{server} function
 #'@param session session
 #'
 #'@return
@@ -20,7 +20,7 @@ server <- function(input, output, session) {
                                    log_out = reactive(logout_init()))
 
   # calls logout module. monitored by login module above since its a reactive object
-  logout_init <- shiny::callModule(logoutServer, "logout", shiny::reactive(credentials()$user_auth))
+  logout_init <- shiny::callModule(logoutServer, "logout", active=shiny::reactive(credentials()$user_auth))
 
   ##############################################################################################
 
