@@ -3,6 +3,13 @@
 #' This is the UI (User Interface) portion of the app.
 #' It contains the layout and look of the app and the parameters that get passed to the \code{\link{server}} portion of the app
 #'
+#'@importFrom shiny "tags" "div" "textOutput"
+#'
+#'@examples
+#'\dontrun{
+#'runAuthenticate()
+#'}
+#'
 #'
 #'@export
 
@@ -26,12 +33,11 @@ runAuthenticate <- function() {
       tags$head(tags$style(".table{margin: 0 auto;}"),
                 tags$script(src="https://cdnjs.cloudflare.com/ajax/libs/iframe-resizer/3.5.16/iframeResizer.contentWindow.min.js",
                             type="text/javascript"),
-                includeScript(system.file("extdata","returnClick.js",package = "authenticate"))
+                shiny::includeScript(system.file("extdata","returnClick.js",package = "authenticate"))
       ),
 
       loginUI("login",error_message = paste0("Login failed. Three failures and you'll need to contact IT to reset")),
       shiny::uiOutput("SAGAUI"),
-      shiny::HTML('<div data-iframe-height></div>')
     )
   )
 

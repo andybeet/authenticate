@@ -2,16 +2,15 @@
 #'
 #' Shiny authentication module for use with \code{\link{loginUI}}
 #'
-#'
 #' @param input shiny input
 #' @param output shiny output
 #' @param session shiny session
-#' @param log_out reactive supply the returned reactive from logout here to trigger a user logout
+#' @param log_out Reactive element. Supply the returned reactive from \code{\link{logoutServer}} here to trigger a user logout
 #'
 #' @return A reactive 3 element list to your main application.
 #' \item{user_auth}{A boolean indicating whether there has been a successful login or not}
 #' \item{info}{will be the succesfully logged in username, otherwise = NULL}
-#' \item{channel}{\code{\link{DBI}} object after successful connection}
+#' \item{channel}{\code{\link[DBI]{DBIConnection-class}} object after successful connection}
 #'
 #' @family modules
 #'

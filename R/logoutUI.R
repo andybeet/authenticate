@@ -1,6 +1,5 @@
 #' Logout button aesthetics
 #'
-#'
 #' The logout User Interface design elements are controlled.
 #' This \code{logoutUI} Module is for use with \code{\link{logouServer}} module.
 #'
@@ -16,6 +15,11 @@
 #'@section Reference:
 #'
 #' This code was modified from https://github.com/PaulC91/shinyauthr
+#' @examples
+#' \dontrun{
+#' logoutUI("logout")
+#'}
+#'
 
 logoutUI <- function(id, label = "Log out", class = "btn-danger", style = "color: white;") {
   ns <- shiny::NS(id)

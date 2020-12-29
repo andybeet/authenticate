@@ -10,7 +10,7 @@
 #'@param login_title Character String. Label for the login button
 #'@param error_message Character String. Message to display after failed login
 #'
-#'@returns returns Shiny UI
+#'@returns Shiny UI
 #'
 #'@family modules
 #'

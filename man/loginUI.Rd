@@ -27,7 +27,7 @@ loginUI(
 \item{error_message}{Character String. Message to display after failed login}
 }
 \value{
-returns Shiny UI
+Shiny UI
 }
 \description{
 The login User Interface design elements are controlled.

@@ -10,3 +10,10 @@ runAuthenticate()
 This is the UI (User Interface) portion of the app.
 It contains the layout and look of the app and the parameters that get passed to the \code{\link{server}} portion of the app
 }
+\examples{
+\dontrun{
+runAuthenticate()
+}
+
+
+}

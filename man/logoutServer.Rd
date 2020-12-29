@@ -13,7 +13,7 @@ logoutServer(input, output, session, active)
 
 \item{session}{shiny session}
 
-\item{active}{reactive supply the returned user_auth boolean reactive from loginServer here to hide/show the logout button}
+\item{active}{Reactive element. Supply the returned user_auth boolean reactive from \code{\link{loginServer}} here to hide/show the logout button}
 }
 \description{
 Shiny authentication module for use with \code{\link{logoutUI}}
@@ -21,12 +21,12 @@ Shiny authentication module for use with \code{\link{logoutUI}}
 \section{Notes}{
 
 The reactive output of this module should be supplied as the log_out argument to the
-loginServer module to trigger the logout process
+\code{\link{loginServer}} module to trigger the logout process
 }
 
 \examples{
 \dontrun{
- logout_init <- shiny::callModule(logout, "logout",  active = reactive(user_credentials()$user_auth))
+ logout_init <- shiny::callModule(logoutServer, "logout",  active = reactive(user_credentials()$user_auth))
 }
 }
 \seealso{

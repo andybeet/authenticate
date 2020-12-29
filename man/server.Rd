@@ -7,9 +7,9 @@
 server(input, output, session)
 }
 \arguments{
-\item{input}{inpout}
+\item{input}{Input Object. Values defined by the user when interacting with the app}
 
-\item{output}{output}
+\item{output}{Output object. Values defined by the reactive functions in the \code{server} function}
 
 \item{session}{session}
 }

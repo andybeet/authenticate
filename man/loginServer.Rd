@@ -13,13 +13,13 @@ loginServer(input, output, session, log_out = NULL)
 
 \item{session}{shiny session}
 
-\item{log_out}{reactive supply the returned reactive from logout here to trigger a user logout}
+\item{log_out}{Reactive element. Supply the returned reactive from \code{\link{logoutServer}} here to trigger a user logout}
 }
 \value{
 A reactive 3 element list to your main application.
 \item{user_auth}{A boolean indicating whether there has been a successful login or not}
 \item{info}{will be the succesfully logged in username, otherwise = NULL}
-\item{channel}{\code{\link{DBI}} object after successful connection}
+\item{channel}{\code{\link[DBI]{DBIConnection-class}} object after successful connection}
 }
 \description{
 Shiny authentication module for use with \code{\link{loginUI}}

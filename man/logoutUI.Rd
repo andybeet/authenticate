@@ -28,6 +28,12 @@ This \code{logoutUI} Module is for use with \code{\link{logouServer}} module.
 This code was modified from https://github.com/PaulC91/shinyauthr
 }
 
+\examples{
+\dontrun{
+logoutUI("logout")
+}
+
+}
 \seealso{
 Other modules: 
 \code{\link{loginServer}()},
