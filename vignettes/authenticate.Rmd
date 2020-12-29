@@ -1,0 +1,33 @@
+---
+title: "authenticate"
+output: rmarkdown::html_vignette
+vignette: >
+  %\VignetteIndexEntry{authenticate}
+  %\VignetteEngine{knitr::rmarkdown}
+  %\VignetteEncoding{UTF-8}
+---
+
+```{r, include = FALSE}
+knitr::opts_chunk$set(
+  collapse = TRUE,
+  comment = "#>"
+)
+```
+
+```{r setup}
+library(authenticate)
+```
+
+A front end for any shiny app that requires access to internal databases to run the app. A user must have valid credentials to access the server: `sole`. These credentials are used to both access the app and run it.
+
+## Usage
+
+To launch the app:
+
+    runAuthenticate()
+
+Then enter your credentials in the fields shown and login
+
+```{r eval=T,echo=F }
+knitr::include_graphics(paste0(getwd(),"/figures/appScreenCap1.PNG"))
+```
