@@ -28,7 +28,7 @@ server <- function(input, output, session) {
   user_info <- shiny::reactive({credentials()$info})
 
   # # create a pool in which to grab new db connections when needed
-  # pool <- pool::dbPool(drv=odbc::odbc(),dbname="sole",username=user_info()$user,password=user_info()$pass)
+  # pool <- pool::dbPool(drv=odbc::odbc(),dbname="servername",username=user_info()$user,password=user_info()$pass)
 
   # dummy data used to fill panel
   user_data <- shiny::reactive({
