@@ -18,7 +18,7 @@ knitr::opts_chunk$set(
 library(authenticate)
 ```
 
-A front end for any shiny app that requires access to internal databases to run the app. A user must have valid credentials to access the server: `sole`. These credentials are used to both access the app and run it.
+A front end for any shiny app that requires access to internal databases to run the app. A user must have valid credentials to access the server. These credentials are used to both access the app and run it.
 
 ## Usage
 

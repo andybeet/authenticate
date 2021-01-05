@@ -24,13 +24,15 @@
 #'
 
 
-loginUI <- function(id, title = "Please log in", user_title = "User Name", pass_title = "Password",
+loginUI <- function(id, title = "Please log in", server_title ="Server Name ",user_title = "User Name", pass_title = "Password",
                     login_title = "Log in", error_message = "Invalid username or password!") {
   ns <- shiny::NS(id)
 
   shiny::div(id = ns("panel"), style = "width: 500px; max-width: 100%; margin: 0 auto; padding: 20px;",
              shiny::wellPanel(
                shiny::tags$h2(title, class = "text-center", style = "padding-top: 0;"),
+
+               shiny::textInput(ns("server_name"), shiny::tagList(shiny::icon("server"), server_title)),
 
                shiny::textInput(ns("user_name"), shiny::tagList(shiny::icon("user"), user_title)),
 

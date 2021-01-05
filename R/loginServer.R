@@ -45,7 +45,7 @@ loginServer <- function(input, output, session, log_out = NULL) {
       # check to see if connection can be made. If so authentication made. channel passed back
       channel <- tryCatch(
         {
-          channel <- DBI::dbConnect(odbc::odbc(), dsn="sole",uid=input$user_name,pwd=input$password, timeout = 10)
+          channel <- DBI::dbConnect(odbc::odbc(), dsn=input$server_name,uid=input$user_name,pwd=input$password, timeout = 10)
 
         }, warning=function(w) {
           if (grepl("login denied",w)) {message("login to server failed - Check username and password")}

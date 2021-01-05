@@ -7,6 +7,7 @@
 loginUI(
   id,
   title = "Please log in",
+  server_title = "Server Name ",
   user_title = "User Name",
   pass_title = "Password",
   login_title = "Log in",
