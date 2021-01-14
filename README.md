@@ -1,5 +1,13 @@
 # authenticate
 
+A front end for any shiny app that requires access to internal databases to run the app. A user must have valid credentials to access the server. These credentials are used to both access the app and run it.
+
+## Installation
+
+``` r
+remotes::install_github("NOAA-EDAB/authenticate")
+```
+
 
 #### Legal disclaimer
 
