@@ -1,5 +1,7 @@
 # authenticate
 
+![gitleaks](https://github.com/NOAA-EDAB/authenticate/workflows/gitleaks/badge.svg)
+
 A front end for any shiny app that requires access to internal databases to run the app. A user must have valid credentials to access the server. These credentials are used to both access the app and run it.
 
 ## Installation
@@ -7,6 +9,12 @@ A front end for any shiny app that requires access to internal databases to run 
 ``` r
 remotes::install_github("NOAA-EDAB/authenticate")
 ```
+
+## Contact
+
+| [andybeet](https://github.com/andybeet)        
+| ----------------------------------------------------------------------------------------------- 
+| [![](https://avatars1.githubusercontent.com/u/22455149?s=100&v=4)](https://github.com/andybeet) | 
 
 
 #### Legal disclaimer
