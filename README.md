@@ -1,5 +1,7 @@
 # authenticate
 
+![deploy to github pages](https://github.com/NOAA-EDAB/authenticate/workflows/deploy%20to%20github%20pages/badge.svg)
+![Install on windows](https://github.com/NOAA-EDAB/authenticate/workflows/Install%20on%20windows/badge.svg)
 ![gitleaks](https://github.com/NOAA-EDAB/authenticate/workflows/gitleaks/badge.svg)
 
 A front end for any shiny app that requires access to internal databases to run the app. A user must have valid credentials to access the server. These credentials are used to both access the app and run it.
