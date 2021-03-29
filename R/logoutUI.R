@@ -1,7 +1,7 @@
 #' Logout button aesthetics
 #'
 #' The logout User Interface design elements are controlled.
-#' This \code{logoutUI} Module is for use with \code{\link{logouServer}} module.
+#' This \code{logoutUI} Module is for use with \code{\link{logoutServer}} module.
 #'
 #'@param id Character String. Shiny id
 #'@param label Character String. Label for the logout button
