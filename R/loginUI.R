@@ -5,6 +5,7 @@
 #'
 #'@param id Character String. Shiny id
 #'@param title Character String. Header title for the login panel
+#'@param server_title Character String. Label for the name of server being accessed
 #'@param user_title Character String. Label for the user name text input
 #'@param pass_title Character String. Label for the password text input
 #'@param login_title Character String. Label for the login button

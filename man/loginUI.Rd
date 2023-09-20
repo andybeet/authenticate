@@ -19,6 +19,8 @@ loginUI(
 
 \item{title}{Character String. Header title for the login panel}
 
+\item{server_title}{Character String. Label for the name of server being accessed}
+
 \item{user_title}{Character String. Label for the user name text input}
 
 \item{pass_title}{Character String. Label for the password text input}
