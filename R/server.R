@@ -7,7 +7,6 @@
 #'@param output Output object. Values defined by the reactive functions in the \code{server} function
 #'@param session session
 #'
-#'@return
 
 
 server <- function(input, output, session) {

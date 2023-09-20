@@ -13,9 +13,6 @@ server(input, output, session)
 
 \item{session}{session}
 }
-\value{
-
-}
 \description{
 Function that listens for user input and responds to user input.
 This is called by the ui (user interface) portion of the app which is found in \code{\link{runAuthenticate}}
