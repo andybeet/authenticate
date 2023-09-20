@@ -29,5 +29,5 @@ To launch the app:
 Then enter your credentials in the fields shown and login
 
 ```{r eval=T,echo=F }
-knitr::include_graphics(paste0(getwd(),"/figures/appScreenCap1.PNG"))
+knitr::include_graphics("figures/appScreenCap1.PNG")
 ```
