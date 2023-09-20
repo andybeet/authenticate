@@ -10,6 +10,7 @@ reference:
   desc: "The main server function of the app"
 - contents:
   - server
+  - ui
 
 - title: "login/out modules"
 - contents:
